@@ -124,10 +124,12 @@ const getChannelMembers = async () => {
 // Toggle microphone state
 const toggleMic = async (e) => {
   micMuted = !micMuted;
-  e.target.src = micMuted ? '../icons/mic-off.svg' : '../icons/mic.svg';
+  // Use correct path to icons
+  e.target.src = micMuted ? './icons/mic-off.svg' : './icons/mic.svg';  // Ensure path is correct based on your folder structure
   e.target.style.backgroundColor = micMuted ? 'indianred' : 'ivory';
   audioTracks.localAudioTrack.setMuted(micMuted);
 };
+
 
 // Enter room handler
 const enterRoom = async (e) => {
