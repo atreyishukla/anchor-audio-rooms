@@ -125,7 +125,8 @@ const getChannelMembers = async () => {
 const toggleMic = async (e) => {
   micMuted = !micMuted;
   // Use correct path to icons
-  e.target.src = micMuted ? './icons/mic-off.svg' : './icons/mic.svg';  // Ensure path is correct based on your folder structure
+  e.target.src = micMuted ? '/icons/mic-off.svg' : '/icons/mic.svg';
+  // Ensure path is correct based on your folder structure
   e.target.style.backgroundColor = micMuted ? 'indianred' : 'ivory';
   audioTracks.localAudioTrack.setMuted(micMuted);
 };
