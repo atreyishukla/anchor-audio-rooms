@@ -124,7 +124,7 @@ const getChannelMembers = async () => {
 // Toggle microphone state
 const toggleMic = async (e) => {
   micMuted = !micMuted;
-  e.target.src = micMuted ? './icons/mic-off.svg' : './icons/mic.svg';
+  e.target.src = micMuted ? '../icons/mic-off.svg' : '../icons/mic.svg';
   e.target.style.backgroundColor = micMuted ? 'indianred' : 'ivory';
   audioTracks.localAudioTrack.setMuted(micMuted);
 };
